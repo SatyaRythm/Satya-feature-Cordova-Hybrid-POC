@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LWC Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f6f9;
+            color: #16325c;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #0070d2;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin: -20px -20px 20px -20px;
+            border-radius: 4px 4px 0 0;
+        }
+        .content {
+            padding: 10px 0;
+        }
+        .button {
+            background-color: #0070d2;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #005fb2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>LWC Test Page</h1>
+        </div>
+        <div class="content">
+            <h2>This is a simple test page</h2>
+            <p>If you can see this page, basic HTML rendering is working correctly.</p>
+            <p>This page is used to test if the WebView can properly render HTML content.</p>
+            
+            <h3>JavaScript Test</h3>
+            <p id="js-test">JavaScript is not working.</p>
+            
+            <h3>Button Test</h3>
+            <button class="button" id="test-button">Click Me</button>
+            <p id="button-result"></p>
+            
+            <h3>Navigation</h3>
+            <button class="button" id="test-lwc-button">Test LWC Modules</button>
+        </div>
+    </div>
+
+    <script>
+        // Test if JavaScript is working
+        document.getElementById('js-test').textContent = 'JavaScript is working!';
+        
+        // Test button click
+        document.getElementById('test-button').addEventListener('click', function() {
+            document.getElementById('button-result').textContent = 'Button clicked at ' + new Date().toLocaleTimeString();
+        });
+        
+        // Log to console
+        console.log('Test page loaded successfully');
+        
+        // Navigate to LWC test page
+        document.getElementById('test-lwc-button').addEventListener('click', function() {
+            window.location.href = 'test-lwc.html';
+        });
+    </script>
+</body>
+</html>

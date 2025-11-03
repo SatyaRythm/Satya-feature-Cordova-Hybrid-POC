@@ -1,0 +1,254 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "res/xml/config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<preference name=\"AndroidXEnabled\" value=\"true\" />",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"AndroidInsecureFileModeEnabled\" value=\"true\" />",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"android-minSdkVersion\" value=\"28\" />",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"android-targetSdkVersion\" value=\"35\" />",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"GradleVersion\" value=\"8.7\" />",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"AndroidGradlePluginVersion\" value=\"8.6.1\" />",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"GradlePluginKotlinEnabled\" value=\"true\" />",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"GradlePluginKotlinVersion\" value=\"1.9.24\" />",
+              "count": 1
+            },
+            {
+              "xml": "<allow-navigation href=\"https://localhost\" />",
+              "count": 1
+            },
+            {
+              "xml": "<allow-navigation href=\"https://*.force.com\" />",
+              "count": 1
+            },
+            {
+              "xml": "<allow-navigation href=\"https://*.salesforce.com\" />",
+              "count": 1
+            },
+            {
+              "xml": "<allow-navigation href=\"https://*.visualforce.com\" />",
+              "count": 1
+            },
+            {
+              "xml": "<allow-navigation href=\"https://*.documentforce.com\" />",
+              "count": 1
+            },
+            {
+              "xml": "<allow-navigation href=\"https://*.salesforce-communities.com\" />",
+              "count": 1
+            },
+            {
+              "xml": "<access origin=\"https://localhost\" />",
+              "count": 1
+            },
+            {
+              "xml": "<access origin=\"https://*.force.com\" />",
+              "count": 1
+            },
+            {
+              "xml": "<access origin=\"https://*.salesforce.com\" />",
+              "count": 1
+            },
+            {
+              "xml": "<access origin=\"https://*.visualforce.com\" />",
+              "count": 1
+            },
+            {
+              "xml": "<access origin=\"https://*.documentforce.com\" />",
+              "count": 1
+            },
+            {
+              "xml": "<access origin=\"https://*.salesforce-communities.com\" />",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"com.salesforce.oauth\"><param name=\"android-package\" value=\"com.salesforce.androidsdk.phonegap.plugin.SalesforceOAuthPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"com.salesforce.network\"><param name=\"android-package\" value=\"com.salesforce.androidsdk.phonegap.plugin.SalesforceNetworkPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"com.salesforce.sfaccountmanager\"><param name=\"android-package\" value=\"com.salesforce.androidsdk.phonegap.plugin.SFAccountManagerPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"com.salesforce.sdkinfo\"><param name=\"android-package\" value=\"com.salesforce.androidsdk.phonegap.plugin.SDKInfoPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"com.salesforce.smartstore\"><param name=\"android-package\" value=\"com.salesforce.androidsdk.phonegap.plugin.SmartStorePlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"com.salesforce.mobilesync\"><param name=\"android-package\" value=\"com.salesforce.androidsdk.phonegap.plugin.MobileSyncPlugin\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "res/values/strings.xml": {
+        "parents": {
+          "/resources": [
+            {
+              "xml": "<string name=\"account_type\">com.rhythm.innovations.login</string>",
+              "count": 1
+            },
+            {
+              "xml": "<string name=\"app_package\">com.rhythm.innovations</string>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "app/src/main/AndroidManifest.xml": {
+        "parents": {
+          "/manifest/application/activity": [
+            {
+              "xml": "<activity android:allowBackup=\"false\" android:configChanges=\"orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode\" android:exported=\"true\" android:label=\"@string/app_name\" android:launchMode=\"singleTop\" android:name=\"com.salesforce.androidsdk.phonegap.ui.SalesforceDroidGapActivity\" android:theme=\"@style/SalesforceSDK_SplashScreen\" android:windowSoftInputMode=\"adjustResize\" />",
+              "count": 1,
+              "mode": "merge",
+              "plugin": "com.salesforce",
+              "oldAttrib": {
+                "android:allowBackup": "false",
+                "android:configChanges": "orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode",
+                "android:exported": "true",
+                "android:label": "@string/app_name",
+                "android:launchMode": "singleTop",
+                "android:name": "com.salesforce.androidsdk.phonegap.ui.SalesforceDroidGapActivity",
+                "android:theme": "@style/SalesforceSDK_SplashScreen",
+                "android:windowSoftInputMode": "adjustResize"
+              }
+            }
+          ],
+          "/manifest/application": [
+            {
+              "xml": "<application android:hardwareAccelerated=\"true\" android:icon=\"@drawable/sf__icon\" android:label=\"@string/app_name\" android:manageSpaceActivity=\"com.salesforce.androidsdk.ui.ManageSpaceActivity\" android:name=\"com.salesforce.androidsdk.phonegap.app.HybridApp\" />",
+              "count": 1,
+              "mode": "merge",
+              "plugin": "com.salesforce",
+              "oldAttrib": {
+                "android:hardwareAccelerated": "true",
+                "android:icon": "@drawable/sf__icon",
+                "android:label": "@string/app_name",
+                "android:manageSpaceActivity": "com.salesforce.androidsdk.ui.ManageSpaceActivity",
+                "android:name": "com.salesforce.androidsdk.phonegap.app.HybridApp",
+                "android:supportsRtl": "true"
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "com.salesforce": {
+      "PACKAGE_NAME": "com.rhythm.innovations"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "com.salesforce.plugin.oauth",
+      "file": "plugins/com.salesforce/www/com.salesforce.plugin.oauth.js",
+      "pluginId": "com.salesforce"
+    },
+    {
+      "id": "com.salesforce.plugin.network",
+      "file": "plugins/com.salesforce/www/com.salesforce.plugin.network.js",
+      "pluginId": "com.salesforce"
+    },
+    {
+      "id": "com.salesforce.plugin.sdkinfo",
+      "file": "plugins/com.salesforce/www/com.salesforce.plugin.sdkinfo.js",
+      "pluginId": "com.salesforce"
+    },
+    {
+      "id": "com.salesforce.plugin.smartstore",
+      "file": "plugins/com.salesforce/www/com.salesforce.plugin.smartstore.js",
+      "pluginId": "com.salesforce",
+      "clobbers": [
+        "navigator.smartstore"
+      ]
+    },
+    {
+      "id": "com.salesforce.plugin.smartstore.client",
+      "file": "plugins/com.salesforce/www/com.salesforce.plugin.smartstore.client.js",
+      "pluginId": "com.salesforce",
+      "clobbers": [
+        "navigator.smartstoreClient"
+      ]
+    },
+    {
+      "id": "com.salesforce.plugin.sfaccountmanager",
+      "file": "plugins/com.salesforce/www/com.salesforce.plugin.sfaccountmanager.js",
+      "pluginId": "com.salesforce"
+    },
+    {
+      "id": "com.salesforce.plugin.mobilesync",
+      "file": "plugins/com.salesforce/www/com.salesforce.plugin.mobilesync.js",
+      "pluginId": "com.salesforce"
+    },
+    {
+      "id": "com.salesforce.util.bootstrap",
+      "file": "plugins/com.salesforce/www/com.salesforce.util.bootstrap.js",
+      "pluginId": "com.salesforce"
+    },
+    {
+      "id": "com.salesforce.util.event",
+      "file": "plugins/com.salesforce/www/com.salesforce.util.event.js",
+      "pluginId": "com.salesforce"
+    },
+    {
+      "id": "com.salesforce.util.exec",
+      "file": "plugins/com.salesforce/www/com.salesforce.util.exec.js",
+      "pluginId": "com.salesforce"
+    },
+    {
+      "id": "com.salesforce.util.logger",
+      "file": "plugins/com.salesforce/www/com.salesforce.util.logger.js",
+      "pluginId": "com.salesforce"
+    },
+    {
+      "id": "com.salesforce.util.promiser",
+      "file": "plugins/com.salesforce/www/com.salesforce.util.promiser.js",
+      "pluginId": "com.salesforce"
+    },
+    {
+      "id": "com.salesforce.util.push",
+      "file": "plugins/com.salesforce/www/com.salesforce.util.push.js",
+      "pluginId": "com.salesforce"
+    }
+  ],
+  "plugin_metadata": {
+    "com.salesforce": "13.0.1"
+  }
+}

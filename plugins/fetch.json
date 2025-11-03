@@ -1,0 +1,10 @@
+{
+  "com.salesforce": {
+    "source": {
+      "type": "registry",
+      "id": "salesforce-mobilesdk-cordova-plugin@v13.0.1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}

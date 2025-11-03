@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme -->
+    <style name="SalesforceSDK_SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/cdv_splashscreen_background</item>
+        <item name="colorPrimary">#1589EE</item>
+        <item name="colorPrimaryDark">#0070D2</item>
+        <item name="colorAccent">#0070D2</item>
+    </style>
+</resources>
+

@@ -1,0 +1,14 @@
+{
+    "remoteAccessConsumerKey": "3MVG9gwxgOelbpo9D9Bt5JRfYznMGi2BYMlbSrKPwn.Dj3yQOtE06mWvvcHQMMq9caZd9gCAECduS8M6zp4vn",
+    "oauthRedirectURI": "rhythmapp://oauth/callback",
+    "oauthScopes": [
+        "web",
+        "api"
+    ],
+    "isLocal": true,
+    "startPage": "index.html",
+    "errorPage": "error.html",
+    "shouldAuthenticate": true,
+    "attemptOfflineLoad": false,
+    "androidPushNotificationClientId": ""
+}

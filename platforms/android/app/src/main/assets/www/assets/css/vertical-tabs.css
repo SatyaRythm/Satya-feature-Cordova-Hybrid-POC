@@ -1,0 +1,172 @@
+/* ======================================================= */
+/* Vertical Tabs Styles */
+/* ======================================================= */
+
+:root {
+    --tabs-primary-color: #3182ce;
+    --tabs-bg-color: #f7fafc;
+    --tabs-border-color: #e2e8f0;
+    --tabs-text-color: #4a5568;
+    --tabs-selected-bg: #ebf8ff;
+    --tabs-selected-border: #3182ce;
+    --tabs-hover-bg: #edf2f7;
+    --tabs-header-bg: #f7fafc;
+    --tabs-content-bg: #ffffff;
+    --tabs-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --tabs-nav-width: 200px;
+    --tabs-level-spacing: 1rem;
+}
+
+/* Tabs Shell */
+.tabs-shell {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: var(--tabs-bg-color);
+    overflow: hidden;
+}
+
+/* Tabs Content */
+.tabs-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Tabs Level */
+.tabs-level {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: var(--tabs-level-spacing);
+    background-color: var(--tabs-content-bg);
+    border-radius: 4px;
+    box-shadow: var(--tabs-shadow);
+}
+
+/* Level Header */
+.level-header {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--tabs-border-color);
+    background-color: var(--tabs-header-bg);
+}
+
+.back-button {
+    background-color: transparent;
+    border: 1px solid var(--tabs-border-color);
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    color: var(--tabs-text-color);
+    cursor: pointer;
+    margin-right: 1rem;
+    transition: all 0.2s;
+}
+
+.back-button:hover {
+    background-color: var(--tabs-hover-bg);
+}
+
+.level-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--tabs-text-color);
+    margin: 0;
+}
+
+/* Level Content */
+.level-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 200px;
+    overflow: hidden;
+}
+
+/* Tabs Navigation */
+.tabs-nav {
+    display: flex;
+    flex-direction: column;
+    width: var(--tabs-nav-width);
+    min-width: var(--tabs-nav-width);
+    background-color: var(--tabs-bg-color);
+    border-right: 1px solid var(--tabs-border-color);
+    overflow-y: auto;
+}
+
+.tab-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--tabs-border-color);
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: var(--tabs-text-color);
+    font-size: 0.875rem;
+}
+
+.tab-button:hover {
+    background-color: var(--tabs-hover-bg);
+}
+
+.tab-button.selected {
+    background-color: var(--tabs-selected-bg);
+    color: var(--tabs-primary-color);
+    font-weight: 600;
+    border-left: 3px solid var(--tabs-selected-border);
+}
+
+.tab-icon {
+    margin-right: 0.5rem;
+}
+
+.tab-label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Tab Content */
+.tab-content {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .level-content {
+        flex-direction: column;
+    }
+
+    .tabs-nav {
+        width: 100%;
+        min-width: 100%;
+        max-height: 50px;
+        border-right: none;
+        border-bottom: 1px solid var(--tabs-border-color);
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-direction: row;
+    }
+
+    .tab-button {
+        min-width: 120px;
+        border-bottom: none;
+        border-right: 1px solid var(--tabs-border-color);
+    }
+
+    .tab-button.selected {
+        border-left: none;
+        border-bottom: 3px solid var(--tabs-selected-border);
+    }
+}

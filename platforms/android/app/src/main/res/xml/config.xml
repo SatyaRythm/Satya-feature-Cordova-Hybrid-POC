@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.rhythm.innovations" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <allow-navigation href="https://localhost" />
+    <allow-navigation href="https://*.force.com" />
+    <allow-navigation href="https://*.salesforce.com" />
+    <allow-navigation href="https://*.visualforce.com" />
+    <allow-navigation href="https://*.documentforce.com" />
+    <allow-navigation href="https://*.salesforce-communities.com" />
+    <access origin="https://localhost" />
+    <access origin="https://*.force.com" />
+    <access origin="https://*.salesforce.com" />
+    <access origin="https://*.visualforce.com" />
+    <access origin="https://*.documentforce.com" />
+    <access origin="https://*.salesforce-communities.com" />
+    <feature name="com.salesforce.oauth">
+        <param name="android-package" value="com.salesforce.androidsdk.phonegap.plugin.SalesforceOAuthPlugin" />
+    </feature>
+    <feature name="com.salesforce.network">
+        <param name="android-package" value="com.salesforce.androidsdk.phonegap.plugin.SalesforceNetworkPlugin" />
+    </feature>
+    <feature name="com.salesforce.sfaccountmanager">
+        <param name="android-package" value="com.salesforce.androidsdk.phonegap.plugin.SFAccountManagerPlugin" />
+    </feature>
+    <feature name="com.salesforce.sdkinfo">
+        <param name="android-package" value="com.salesforce.androidsdk.phonegap.plugin.SDKInfoPlugin" />
+    </feature>
+    <feature name="com.salesforce.smartstore">
+        <param name="android-package" value="com.salesforce.androidsdk.phonegap.plugin.SmartStorePlugin" />
+    </feature>
+    <feature name="com.salesforce.mobilesync">
+        <param name="android-package" value="com.salesforce.androidsdk.phonegap.plugin.MobileSyncPlugin" />
+    </feature>
+    <name>Rhythm Mobile</name>
+    <description>Salesforce Hybrid Mobile Application</description>
+    <author email="your-email@example.com" href="https://www.example.com">
+        Your Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="market:*" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="android-minSdkVersion" value="28" />
+    <preference name="android-targetSdkVersion" value="33" />
+    <preference name="GradleVersion" value="8.7" />
+    <preference name="AndroidGradlePluginVersion" value="8.6.1" />
+    <preference name="GradlePluginKotlinEnabled" value="true" />
+    <preference name="GradlePluginKotlinVersion" value="1.9.24" />
+    <preference name="AndroidInsecureFileModeEnabled" value="true" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="AppendUserAgent" value="SalesforceMobileSDK/13.0.0 Hybrid Rhythm-Mobile-7" />
+    <preference name="AndroidXEnabled" value="true" />
+</widget>

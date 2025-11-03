@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhythm Mobile App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            color: #16325c;
+        }
+        .app-container {
+            max-width: 100%;
+            padding: 20px;
+        }
+        .header {
+            background-color: #0070d2;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            color: #706e6b;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="app-container">
+            <div class="header">
+                <h1>Rhythm Mobile</h1>
+            </div>
+            <div class="content">
+                <h2>Welcome to Rhythm Mobile</h2>
+                <p>Your app is now running successfully!</p>
+                <p>This is a placeholder content that will be replaced with your actual application content.</p>
+            </div>
+            <div class="footer">
+                <p>Powered by Salesforce Mobile SDK</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple script to demonstrate the app is working
+        console.log('Rhythm Mobile app loaded successfully');
+        
+        // Dispatch event to notify that the app is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            const event = new CustomEvent('app-ready', {
+                bubbles: true,
+                cancelable: true
+            });
+            document.dispatchEvent(event);
+        });
+    </script>
+</body>
+</html>
