@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Salesforce LWC Mobile CRM</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta
+            name="description"
+            content="Salesforce-like CRM built with Lightning Web Components Open Source"
+        />
+        <meta name="theme-color" content="#0070d2" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+        />
+        <meta name="apple-mobile-web-app-title" content="SF LWC" />
+        <meta name="author" content="Salesforce Developer Evangelism" />
+        <meta name="application-name" content="Salesforce LWC Mobile" />
+        <meta name="msapplication-TileColor" content="#0070d2" />
+
+        <link rel="stylesheet" href="\1\unknown\immutable\s\17591527729710604\D:%5CRhythm-Mobile-7%5Csrc%5Cassets%5Ccss%5Cmain.css" />
+        <link rel="stylesheet" href="\1\unknown\immutable\s\17591526826498846\D:%5CRhythm-Mobile-7%5Csrc%5Cassets%5Ccss%5Cnormalize.css" />
+        <link rel="stylesheet" href="\1\unknown\immutable\s\17591527729710604\D:%5CRhythm-Mobile-7%5Csrc%5Cassets%5Ccss%5Cvertical-tabs.css" />
+    </head>
+    <body>
+        <noscript>
+            <div class="slds-align_absolute-center slds-p-around_medium">
+                To use this app, please enable JavaScript.
+            </div>
+        </noscript>
+        <div id="main"><ui-app></ui-app></div>
+        <script type="application/javascript" src="/1/application/esm/l/en-US/ai/home/configuration/ci/-%2F-/s/45c09146b8bf769acce814f380915125/config.js"></script>
+<script type="module" src="/1/bundle/esm/l/en-US/bi/0/module/mi/%40lwrjs%2Fapp-service%2Fhome%2Fmodule%2Fesm%2Fv%2F0_16_11/s/sha256--ZwafUMjqE4k2_xbrxsccZf7sbL512InucsqazqPt7Y/bundle_@lwrjs_app-service_home_module_esm.js"></script>
+<link rel="modulepreload" href="/1/bundle/esm/l/en-US/bi/0/module/mi/ui%2Fapp%2Fv%2F1_0_0/s/sha256-Emx3KBh-kLdUOabtBnjXR03UKCqjwZQw9y9Kpy5w_nM/bundle_ui_app.js" />
+
+        <script src="https://cdn.jsdelivr.net/npm/jsforce@3.2.2/dist/jsforce.min.js"></script>
+
+        <!-- Fallback for browsers without JavaScript -->
+        <script>
+            // Check if the browser supports service workers
+            if ('serviceWorker' in navigator) {
+                // Register service worker when page loads
+                window.addEventListener('load', function () {
+                    // We'll let our LWC component handle this, but this is a fallback
+                    console.log(
+                        'Service Worker registration will be handled by LWC component'
+                    );
+                    navigator.serviceWorker
+                        .register('/serviceWorker.js')
+                        .then((registration) => {
+                            console.log(
+                                'Service Worker registered with scope:',
+                                registration.scope
+                            );
+                        })
+                        .catch((error) => {
+                            console.error(
+                                'Service Worker registration failed:',
+                                error
+                            );
+                        });
+                });
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob: https://ssl.gstatic.com https://*.salesforce.com https://*.force.com https://*.visualforce.com https://*.documentforce.com https://*.salesforceliveagent.com 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://*.salesforce.com https://*.force.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.salesforce.com https://*.force.com; img-src 'self' data: blob: https://*.salesforce.com https://*.force.com; font-src 'self' data: https://*.salesforce.com https://*.force.com; connect-src 'self' https://*.salesforce.com https://*.force.com ws://localhost:* wss://*.salesforce.com wss://*.force.com;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <meta name="description" content="Salesforce-like CRM built with Lightning Web Components Open Source">
+        <meta name="theme-color" content="#0070d2">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="Rhythm Mobile">
+        <meta name="application-name" content="Rhythm Mobile">
+        <meta name="msapplication-TileColor" content="#0070d2">
+        
+        <!-- Salesforce Mobile SDK Required -->
+        <script src="cordova.js"></script>
+        <script src="force-app.js"></script>
+        <script src="js/salesforce-bridge.js"></script>
+        
+        <!-- LWC OSS Assets -->
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/normalize.css">
+        <link rel="stylesheet" href="assets/css/vertical-tabs.css">
+        
+        <title>Rhythm Mobile</title>
+    </head>
+    <body>
+        <div id="sfhybridapp-loader" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; background-color: #f4f6f9; z-index: 9999;">
+            <div style="text-align: center;">
+                <img src="assets/images/salesforce-logo.svg" alt="Salesforce Logo" style="width: 100px; margin-bottom: 20px;">
+                <div style="font-family: Arial, sans-serif; font-size: 18px; color: #16325c;">Loading application For...</div>
+            </div>
+        </div>
+
+        <div id="main"></div>
+
+        <script>
+            // Call loadLWRApp directly when the script loads
+            console.log('Starting app initialization');
+            
+            // Load the app immediately without waiting for any events
+            // Add a small delay to ensure DOM is ready
+            setTimeout(function() {
+                console.log('Loading app content');
+                loadLWRApp();
+            }, 500);
+
+            function loadLWRApp() {
+                // Load LWR app content
+                fetch('../../site/index.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        // Extract the body content from the LWR app
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        
+                        // Get the main content
+                        const mainContent = doc.getElementById('main');
+                        if (mainContent) {
+                            document.getElementById('main').innerHTML = mainContent.innerHTML;
+                        }
+                        
+                        // Get all scripts from the LWR app and execute them
+                        const scripts = doc.querySelectorAll('script');
+                        scripts.forEach(script => {
+                            if (script.src) {
+                                // For external scripts
+                                const newScript = document.createElement('script');
+                                newScript.src = script.src;
+                                document.body.appendChild(newScript);
+                            } else {
+                                // For inline scripts
+                                eval(script.textContent);
+                            }
+                        });
+                        
+                        // Hide loader
+                        document.getElementById('sfhybridapp-loader').style.display = 'none';
+                    })
+                    .catch(error => {
+                        console.error('Error loading LWR app:', error);
+                        document.getElementById('main').innerHTML = '<div style="padding: 20px; text-align: center;"><h2>Error loading application</h2><p>' + error.message + '</p><p>Please check the console for more details.</p></div>';
+                        document.getElementById('sfhybridapp-loader').style.display = 'none';
+                    });
+            }
+        </script>
+    </body>
+</html>

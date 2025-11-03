@@ -1,0 +1,26 @@
+{
+  "name": "com.rhythm.innovations",
+  "displayName": "SalesforceHybridApp",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "cordova": "^12.0.0",
+    "shelljs": "^0.8.5"
+  },
+  "devDependencies": {
+    "cordova-android": "^13.0.0",
+    "salesforce-mobilesdk-cordova-plugin": "^13.0.1"
+  },
+  "cordova": {
+    "platforms": []
+  }
+}
